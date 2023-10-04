@@ -17,6 +17,7 @@ protocol SplashViewModelProtocol {
 // MARK: - Class
 final class SplashViewModel {
     
+    private weak var viewDelegate: SplashViewProtocol?
     
     private func loadData() {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
