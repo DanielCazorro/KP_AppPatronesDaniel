@@ -63,9 +63,6 @@
 				5D639F7C2ACDA8D4001B33F1 /* Resources */,
 				5D005ADB2ACD4B07002E28AA /* Domain */,
 				5D639F7D2ACDA8FB001B33F1 /* UI */,
-				5D005AD22ACD4989002E28AA /* LaunchScreen.storyboard */,
-				5D639F822ACDACB3001B33F1 /* SplashViewController.swift */,
-				5D639F832ACDACB3001B33F1 /* SplashViewController.xib */,
 			);
 			path = AppPatronesDaniel;
 			sourceTree = "<group>";
@@ -106,6 +103,7 @@
 		5D639F7D2ACDA8FB001B33F1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5D639F862ACDAD7A001B33F1 /* LaunchScreen */,
 				5D639F7E2ACDA90C001B33F1 /* Splash */,
 				5D639F7F2ACDA917001B33F1 /* Home */,
 				5D639F802ACDA91F001B33F1 /* Detail */,
@@ -116,6 +114,9 @@
 		5D639F7E2ACDA90C001B33F1 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				5D639F872ACDAD82001B33F1 /* View */,
+				5D639F882ACDAD88001B33F1 /* Controller */,
+				5D639F892ACDAD92001B33F1 /* ViewModel */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -140,6 +141,37 @@
 			children = (
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		5D639F862ACDAD7A001B33F1 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				5D005AD22ACD4989002E28AA /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		5D639F872ACDAD82001B33F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D639F832ACDACB3001B33F1 /* SplashViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D639F882ACDAD88001B33F1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D639F822ACDACB3001B33F1 /* SplashViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5D639F892ACDAD92001B33F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
