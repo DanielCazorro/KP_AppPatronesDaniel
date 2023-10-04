@@ -14,6 +14,7 @@
 		5D005ADE2ACD4B1B002E28AA /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D005ADD2ACD4B1B002E28AA /* CharacterModel.swift */; };
 		5D639F842ACDACB3001B33F1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F822ACDACB3001B33F1 /* SplashViewController.swift */; };
 		5D639F852ACDACB3001B33F1 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D639F832ACDACB3001B33F1 /* SplashViewController.xib */; };
+		5D639F8B2ACDB25B001B33F1 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F8A2ACDB25B001B33F1 /* SplashViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5D005ADD2ACD4B1B002E28AA /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
 		5D639F822ACDACB3001B33F1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		5D639F832ACDACB3001B33F1 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		5D639F8A2ACDB25B001B33F1 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		5D639F892ACDAD92001B33F1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5D639F8A2ACDB25B001B33F1 /* SplashViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D639F8B2ACDB25B001B33F1 /* SplashViewModel.swift in Sources */,
 				5D005ADE2ACD4B1B002E28AA /* CharacterModel.swift in Sources */,
 				5D005AC82ACD4988002E28AA /* AppDelegate.swift in Sources */,
 				5D005ACA2ACD4988002E28AA /* SceneDelegate.swift in Sources */,
