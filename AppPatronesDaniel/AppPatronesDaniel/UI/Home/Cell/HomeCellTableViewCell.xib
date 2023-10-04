@@ -19,7 +19,26 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5g-zA-vi2">
                         <rect key="frame" x="0.0" y="0.0" width="323" height="400"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="19s-YG-rRS">
+                                <rect key="frame" x="0.0" y="0.0" width="323" height="400"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayT-el-h6h">
+                                <rect key="frame" x="140.66666666666666" y="367" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ayT-el-h6h" firstAttribute="centerX" secondItem="t5g-zA-vi2" secondAttribute="centerX" id="Cyb-Gr-gLw"/>
+                            <constraint firstAttribute="trailing" secondItem="19s-YG-rRS" secondAttribute="trailing" id="L2l-bS-X7y"/>
+                            <constraint firstItem="19s-YG-rRS" firstAttribute="top" secondItem="t5g-zA-vi2" secondAttribute="top" id="T3P-cR-qbg"/>
+                            <constraint firstAttribute="bottom" secondItem="ayT-el-h6h" secondAttribute="bottom" constant="12" id="gwJ-LH-jnu"/>
+                            <constraint firstItem="19s-YG-rRS" firstAttribute="leading" secondItem="t5g-zA-vi2" secondAttribute="leading" id="iOr-Lk-THv"/>
+                            <constraint firstAttribute="bottom" secondItem="19s-YG-rRS" secondAttribute="bottom" id="mgI-nf-eZf"/>
+                        </constraints>
                     </view>
                 </subviews>
                 <constraints>
@@ -30,6 +49,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageCellHome" destination="19s-YG-rRS" id="yyX-CS-Svu"/>
+                <outlet property="nameCellHome" destination="ayT-el-h6h" id="uk5-6x-PfM"/>
+                <outlet property="viewCellHome" destination="t5g-zA-vi2" id="lYO-vd-lyQ"/>
+            </connections>
             <point key="canvasLocation" x="90.839694656488547" y="22.887323943661972"/>
         </tableViewCell>
     </objects>

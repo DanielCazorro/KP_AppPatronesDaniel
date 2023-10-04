@@ -9,15 +9,30 @@ import UIKit
 
 class HomeCellTableViewCell: UITableViewCell {
 
+    // MARK: IBOutlet
+    @IBOutlet weak var viewCellHome: UIView!
+    @IBOutlet weak var imageCellHome: UIImageView!
+    @IBOutlet weak var nameCellHome: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        viewCellHome.layer.cornerRadius = 3.5
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        nameCellHome.text = nil
+        imageCellHome.image = nil
+    }
+    
+    func updateViews
+    
+    private func update(name: String?) {
+        nameCellHome.text = name ?? ""
+    }
+    
+    private func update(image: String?) {
+        imageCellHome.image = UIImage(named: image ?? "")
     }
     
 }
