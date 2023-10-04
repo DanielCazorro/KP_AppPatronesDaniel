@@ -12,6 +12,17 @@ import Foundation
 // MARK: - Class
 final class SplashViewModel {
     
+    
+    func onViewsLoaded() {
+        loadData()
+    }
+    
+    
+    private func loadData() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            // TODO: Notify view move to home
+        }
+    }
 }
 
 // MARK: - Extension

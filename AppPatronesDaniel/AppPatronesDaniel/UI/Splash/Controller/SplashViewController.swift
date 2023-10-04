@@ -6,7 +6,9 @@
 //
 
 import UIKit
+// MARK: - Protocol
 
+// MARK: - Class
 class SplashViewController: UIViewController {
 
     // MARK: - IBOutlets
@@ -21,3 +23,5 @@ class SplashViewController: UIViewController {
     
 
 }
+
+// MARK: - Extension
