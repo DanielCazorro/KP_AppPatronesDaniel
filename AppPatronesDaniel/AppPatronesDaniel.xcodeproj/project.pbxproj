@@ -18,8 +18,8 @@
 		5D639F8E2ACDBA2B001B33F1 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F8C2ACDBA2B001B33F1 /* HomeTableViewController.swift */; };
 		5D639F8F2ACDBA2B001B33F1 /* HomeTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D639F8D2ACDBA2B001B33F1 /* HomeTableViewController.xib */; };
 		5D639F942ACDD017001B33F1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F932ACDD017001B33F1 /* HomeViewModel.swift */; };
-		5D639F992ACDD04B001B33F1 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F972ACDD04B001B33F1 /* HomeTableViewCell.swift */; };
-		5D639F9A2ACDD04B001B33F1 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D639F982ACDD04B001B33F1 /* HomeTableViewCell.xib */; };
+		5D639F992ACDD04B001B33F1 /* HomeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F972ACDD04B001B33F1 /* HomeCellTableViewCell.swift */; };
+		5D639F9A2ACDD04B001B33F1 /* HomeCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D639F982ACDD04B001B33F1 /* HomeCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +36,8 @@
 		5D639F8C2ACDBA2B001B33F1 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		5D639F8D2ACDBA2B001B33F1 /* HomeTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewController.xib; sourceTree = "<group>"; };
 		5D639F932ACDD017001B33F1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		5D639F972ACDD04B001B33F1 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		5D639F982ACDD04B001B33F1 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		5D639F972ACDD04B001B33F1 /* HomeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellTableViewCell.swift; sourceTree = "<group>"; };
+		5D639F982ACDD04B001B33F1 /* HomeCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCellTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +154,8 @@
 		5D639F812ACDA93D001B33F1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				5D639F972ACDD04B001B33F1 /* HomeTableViewCell.swift */,
-				5D639F982ACDD04B001B33F1 /* HomeTableViewCell.xib */,
+				5D639F972ACDD04B001B33F1 /* HomeCellTableViewCell.swift */,
+				5D639F982ACDD04B001B33F1 /* HomeCellTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 				5D639F8F2ACDBA2B001B33F1 /* HomeTableViewController.xib in Resources */,
 				5D005AD42ACD4989002E28AA /* LaunchScreen.storyboard in Resources */,
 				5D639F852ACDACB3001B33F1 /* SplashViewController.xib in Resources */,
-				5D639F9A2ACDD04B001B33F1 /* HomeTableViewCell.xib in Resources */,
+				5D639F9A2ACDD04B001B33F1 /* HomeCellTableViewCell.xib in Resources */,
 				5D005AD12ACD4989002E28AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,7 +295,7 @@
 				5D005ADE2ACD4B1B002E28AA /* CharacterModel.swift in Sources */,
 				5D005AC82ACD4988002E28AA /* AppDelegate.swift in Sources */,
 				5D005ACA2ACD4988002E28AA /* SceneDelegate.swift in Sources */,
-				5D639F992ACDD04B001B33F1 /* HomeTableViewCell.swift in Sources */,
+				5D639F992ACDD04B001B33F1 /* HomeCellTableViewCell.swift in Sources */,
 				5D639F842ACDACB3001B33F1 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
