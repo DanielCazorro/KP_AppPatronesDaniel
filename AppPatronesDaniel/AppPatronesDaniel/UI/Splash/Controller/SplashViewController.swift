@@ -27,14 +27,26 @@ class SplashViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        activityIndicator.stopAnimating()
+    }
 }
 
 // MARK: - Extension
 extension SplashViewController: SplashViewProtocol {
+    // Func to charge activity indicatro
     func showLoading(_ show: Bool) {
-        
+        switch show {
+        case true where !activityIndicator.isAnimating:
+            activityIndicator.startAnimating()
+        case false where activityIndicator.isAnimating:
+            activityIndicator.stopAnimating()
+        default: break
+        }
     }
-    
+    // Func to move to Home View
     func navigateToHome() {
         let nextVC = HomeTableViewController()
         navigationController?.setViewControllers([nextVC], animated: true)
