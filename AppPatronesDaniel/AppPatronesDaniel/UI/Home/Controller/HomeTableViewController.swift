@@ -27,7 +27,7 @@ class HomeTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 100
+        return sampleCharacterData.count
     }
 
     
@@ -37,7 +37,9 @@ class HomeTableViewController: UITableViewController {
             return UITableViewCell()
         }
 
-        // Configure the cell...
+        if(indexPath.row < sampleCharacterData.count) {
+            cell.updateViews(data: sampleCharacterData[indexPath.row])
+        }
 
         return cell
     }

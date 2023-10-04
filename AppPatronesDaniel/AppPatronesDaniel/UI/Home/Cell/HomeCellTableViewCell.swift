@@ -25,14 +25,48 @@ class HomeCellTableViewCell: UITableViewCell {
         imageCellHome.image = nil
     }
     
-    func updateViews
+    func updateViews(data: CharacterModel?) {
+        update(name: data?.name)
+        //update(image: data?.photo)
+    }
     
     private func update(name: String?) {
         nameCellHome.text = name ?? ""
     }
     
-    private func update(image: String?) {
-        imageCellHome.image = UIImage(named: image ?? "")
+    private func update(imageUrl: String?) {
+        guard let imageUrlString = imageUrl, let imageUrl = URL(string: imageUrlString) else {
+            // Si la URL de la imagen es nula o no válida, puedes asignar una imagen de marcador de posición o dejarla en blanco.
+            imageCellHome.image = UIImage(named: "placeholder_image")
+            return
+        }
+
+        // Crea una sesión URLSession para descargar la imagen
+        let session = URLSession.shared
+
+        // Crea una tarea de descarga de datos
+        let task = session.dataTask(with: imageUrl) { [weak self] (data, response, error) in
+            // Verifica si se ha producido un error durante la descarga de datos
+            if let error = error {
+                print("Error al descargar la imagen: \(error.localizedDescription)")
+                return
+            }
+
+            // Verifica si se han recibido datos válidos
+            if let data = data, let image = UIImage(data: data) {
+                // Asigna la imagen descargada a la vista de imagen en el hilo principal
+                DispatchQueue.main.async {
+                    self?.imageCellHome.image = image
+                }
+            } else {
+                // Si los datos no son válidos, asigna una imagen de marcador de posición o deja la vista de imagen en blanco
+                DispatchQueue.main.async {
+                    self?.imageCellHome.image = UIImage(named: "placeholder_image")
+                }
+            }
+        }
+
+        // Inicia la tarea de descarga
+        task.resume()
     }
-    
 }
