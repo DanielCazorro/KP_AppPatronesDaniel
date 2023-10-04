@@ -12,6 +12,8 @@
 		5D005AD12ACD4989002E28AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D005AD02ACD4989002E28AA /* Assets.xcassets */; };
 		5D005AD42ACD4989002E28AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D005AD22ACD4989002E28AA /* LaunchScreen.storyboard */; };
 		5D005ADE2ACD4B1B002E28AA /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D005ADD2ACD4B1B002E28AA /* CharacterModel.swift */; };
+		5D639F842ACDACB3001B33F1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F822ACDACB3001B33F1 /* SplashViewController.swift */; };
+		5D639F852ACDACB3001B33F1 /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D639F832ACDACB3001B33F1 /* SplashViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5D005AD32ACD4989002E28AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D005AD52ACD4989002E28AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D005ADD2ACD4B1B002E28AA /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		5D639F822ACDACB3001B33F1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		5D639F832ACDACB3001B33F1 /* SplashViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				5D005ADB2ACD4B07002E28AA /* Domain */,
 				5D639F7D2ACDA8FB001B33F1 /* UI */,
 				5D005AD22ACD4989002E28AA /* LaunchScreen.storyboard */,
+				5D639F822ACDACB3001B33F1 /* SplashViewController.swift */,
+				5D639F832ACDACB3001B33F1 /* SplashViewController.xib */,
 			);
 			path = AppPatronesDaniel;
 			sourceTree = "<group>";
@@ -195,6 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D005AD42ACD4989002E28AA /* LaunchScreen.storyboard in Resources */,
+				5D639F852ACDACB3001B33F1 /* SplashViewController.xib in Resources */,
 				5D005AD12ACD4989002E28AA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +216,7 @@
 				5D005ADE2ACD4B1B002E28AA /* CharacterModel.swift in Sources */,
 				5D005AC82ACD4988002E28AA /* AppDelegate.swift in Sources */,
 				5D005ACA2ACD4988002E28AA /* SceneDelegate.swift in Sources */,
+				5D639F842ACDACB3001B33F1 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
