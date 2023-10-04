@@ -8,14 +8,14 @@
 import Foundation
 
 // MARK: - Protocol
+protocol SplashViewModelProtocol {
+    func onViewsLoaded()
+}
+
+
 
 // MARK: - Class
 final class SplashViewModel {
-    
-    
-    func onViewsLoaded() {
-        loadData()
-    }
     
     
     private func loadData() {
@@ -25,4 +25,13 @@ final class SplashViewModel {
     }
 }
 
+
+
 // MARK: - Extension
+extension SplashViewModel: SplashViewModelProtocol {
+    func onViewsLoaded() {
+        loadData()
+    }
+    
+    
+}
