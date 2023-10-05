@@ -7,23 +7,48 @@
 
 import UIKit
 
+// MARK: - Protocol -
+
+protocol DetailViewProtocol: AnyObject {
+    
+}
+
+
+// MARK: - Class -
+
 class DetailViewController: UIViewController {
 
+    // IBOutlets
+    
+    @IBOutlet weak var heroImageView: UIImageView!
+    @IBOutlet weak var heroNameLabel: UILabel!
+    @IBOutlet weak var heroDescriptionTextView: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let selectedCharacter = viewModel?.selectedCharacter {
+            // Configura los elementos de la vista con los datos del personaje seleccionado
+            heroNameLabel.text = selectedCharacter.name
+            heroDescriptionTextView.text = selectedCharacter.description
+            
+            if let imageUrlString = selectedCharacter.photo,
+               let imageUrl = URL(string: imageUrlString) {
+                // Descarga la imagen desde la URL y asigna la imagen a heroImageView
+                // Puedes usar la lógica que mencioné anteriormente para cargar la imagen desde una URL.
+            } else {
+                // La URL de la imagen es nula o no válida, puedes asignar una imagen de marcador de posición o dejarla en blanco.
+                heroImageView.image = UIImage(named: "placeholder_image")
+            }
+        }
     }
 
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+// MARK: - Extension -
 
+extension DetailViewController {
+    
 }
