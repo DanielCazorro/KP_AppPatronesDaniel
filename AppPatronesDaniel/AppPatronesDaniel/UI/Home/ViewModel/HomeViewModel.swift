@@ -14,6 +14,7 @@ protocol HomeViewModelProtocol {
     var dataCount: Int { get }
     func onViewsLoaded()
     func data(at index: Int) -> CharacterModel?
+    func onItemSelected(at index: Int)
 }
 
 
@@ -30,7 +31,7 @@ final class HomeViewModel {
     
     private func loadData() {
         viewData = sampleCharacterData
-        //TODO: Notify view draw information
+        viewDelegate?.updateViews()
     }
     
 }
@@ -39,6 +40,11 @@ final class HomeViewModel {
 // MARK: - Extension
 
 extension HomeViewModel: HomeViewModelProtocol {
+    func onItemSelected(at index: Int) {
+        guard let data = data(at: index) else {return}
+        viewDelegate?.navigateToDetail(with: data)
+    }
+    
     func data(at index: Int) -> CharacterModel? {
         guard index < dataCount else { return nil }
         return viewData[index]

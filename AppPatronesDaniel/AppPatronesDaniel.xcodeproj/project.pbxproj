@@ -20,6 +20,8 @@
 		5D639F942ACDD017001B33F1 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F932ACDD017001B33F1 /* HomeViewModel.swift */; };
 		5D639F992ACDD04B001B33F1 /* HomeCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D639F972ACDD04B001B33F1 /* HomeCellTableViewCell.swift */; };
 		5D639F9A2ACDD04B001B33F1 /* HomeCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D639F982ACDD04B001B33F1 /* HomeCellTableViewCell.xib */; };
+		5DF69CEC2ACF2FA70067F58A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DF69CEA2ACF2FA70067F58A /* DetailViewController.swift */; };
+		5DF69CED2ACF2FA70067F58A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DF69CEB2ACF2FA70067F58A /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		5D639F932ACDD017001B33F1 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5D639F972ACDD04B001B33F1 /* HomeCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellTableViewCell.swift; sourceTree = "<group>"; };
 		5D639F982ACDD04B001B33F1 /* HomeCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCellTableViewCell.xib; sourceTree = "<group>"; };
+		5DF69CEA2ACF2FA70067F58A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		5DF69CEB2ACF2FA70067F58A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,9 @@
 		5D639F802ACDA91F001B33F1 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				5DF69CE92ACF2F6F0067F58A /* View */,
+				5DF69CE82ACF2F680067F58A /* Controller */,
+				5DF69CE72ACF2F570067F58A /* ViewModel */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -216,6 +223,29 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5DF69CE72ACF2F570067F58A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5DF69CE82ACF2F680067F58A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DF69CEA2ACF2FA70067F58A /* DetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DF69CE92ACF2F6F0067F58A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DF69CEB2ACF2FA70067F58A /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -275,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D639F8F2ACDBA2B001B33F1 /* HomeTableViewController.xib in Resources */,
+				5DF69CED2ACF2FA70067F58A /* DetailViewController.xib in Resources */,
 				5D005AD42ACD4989002E28AA /* LaunchScreen.storyboard in Resources */,
 				5D639F852ACDACB3001B33F1 /* SplashViewController.xib in Resources */,
 				5D639F9A2ACDD04B001B33F1 /* HomeCellTableViewCell.xib in Resources */,
@@ -289,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DF69CEC2ACF2FA70067F58A /* DetailViewController.swift in Sources */,
 				5D639F8E2ACDBA2B001B33F1 /* HomeTableViewController.swift in Sources */,
 				5D639F8B2ACDB25B001B33F1 /* SplashViewModel.swift in Sources */,
 				5D639F942ACDD017001B33F1 /* HomeViewModel.swift in Sources */,
