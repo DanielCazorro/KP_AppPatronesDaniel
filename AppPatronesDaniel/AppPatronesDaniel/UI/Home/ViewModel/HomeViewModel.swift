@@ -6,3 +6,29 @@
 //
 
 import Foundation
+
+
+// MARK: - Protocol -
+
+protocol HomeViewModelProtocol {
+    
+}
+
+
+// MARK: - Class -
+
+final class HomeViewModel {
+    
+    private weak var viewDelegate: HomeViewProtocol?
+    
+    init(viewDelegate: HomeViewProtocol? = nil) {
+        self.viewDelegate = viewDelegate
+    }
+}
+
+
+// MARK: - Extension
+
+extension HomeViewModel: HomeViewModelProtocol {
+    
+}

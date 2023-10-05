@@ -7,8 +7,19 @@
 
 import UIKit
 
+
+// MARK: - Protocol -
+
+protocol HomeViewProtocol: AnyObject {
+    
+}
+
+// MARK: - Class -
+
 class HomeTableViewController: UITableViewController {
         
+    var viewModel: HomeViewModelProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCells()
@@ -18,7 +29,7 @@ class HomeTableViewController: UITableViewController {
         tableView.register(UINib(nibName: "HomeCellTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
     }
     
-    // MARK: - Table view data source
+    // Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -43,5 +54,11 @@ class HomeTableViewController: UITableViewController {
 
         return cell
     }
+    
+}
+
+// MARK: - Extension -
+
+extension HomeTableViewController: HomeViewProtocol {
     
 }
