@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="AppPatronesDaniel" customModuleProvider="target">
             <connections>
-                <outlet property="heroDescriptionTextView" destination="dYq-Ml-2Jh" id="57j-DB-zeL"/>
+                <outlet property="heroDescriptionTextView" destination="jR8-wa-oer" id="ym2-6h-AaW"/>
                 <outlet property="heroImageView" destination="oq5-MH-mm5" id="ePr-Wm-LCK"/>
                 <outlet property="heroNameLabel" destination="aSc-nN-laC" id="KdK-Vg-zh7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -33,29 +33,35 @@
                     <color key="textColor" systemColor="systemOrangeColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dYq-Ml-2Jh" userLabel="heroDescriptionTextView">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jR8-wa-oer">
                     <rect key="frame" x="12" y="345" width="369" height="461"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <color key="textColor" systemColor="labelColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="aSc-nN-laC" firstAttribute="top" secondItem="oq5-MH-mm5" secondAttribute="bottom" constant="12" id="6KY-Cu-Yn1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dYq-Ml-2Jh" secondAttribute="bottom" constant="12" id="7Kr-br-30K"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dYq-Ml-2Jh" secondAttribute="trailing" constant="12" id="D6x-ae-NSo"/>
+                <constraint firstItem="jR8-wa-oer" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="Cvv-vJ-VFq"/>
+                <constraint firstItem="jR8-wa-oer" firstAttribute="top" secondItem="oq5-MH-mm5" secondAttribute="bottom" constant="36" id="DiO-MA-mid"/>
                 <constraint firstItem="aSc-nN-laC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="JkZ-LW-IBQ"/>
-                <constraint firstItem="dYq-Ml-2Jh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="b8t-to-lE1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jR8-wa-oer" secondAttribute="trailing" constant="12" id="bG4-b3-2XQ"/>
                 <constraint firstItem="oq5-MH-mm5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ced-M1-CMz"/>
                 <constraint firstItem="oq5-MH-mm5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fas-ai-0U4"/>
-                <constraint firstItem="dYq-Ml-2Jh" firstAttribute="top" secondItem="oq5-MH-mm5" secondAttribute="bottom" constant="36" id="wCj-wz-T1y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jR8-wa-oer" secondAttribute="bottom" constant="12" id="qVY-7Y-yYD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oq5-MH-mm5" secondAttribute="trailing" id="yi3-N4-2T1"/>
             </constraints>
             <point key="canvasLocation" x="-106" y="-11"/>
         </view>
     </objects>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

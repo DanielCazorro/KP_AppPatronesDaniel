@@ -22,8 +22,9 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var heroNameLabel: UILabel!
-    @IBOutlet weak var heroDescriptionTextView: UITextField!
+    @IBOutlet weak var heroDescriptionTextView: UITextView!
     
+    var viewModel: DetailViewModelProtocol? // Agrega la propiedad viewModel
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +38,26 @@ class DetailViewController: UIViewController {
                let imageUrl = URL(string: imageUrlString) {
                 // Descarga la imagen desde la URL y asigna la imagen a heroImageView
                 // Puedes usar la lógica que mencioné anteriormente para cargar la imagen desde una URL.
+                // Por ejemplo:
+                DispatchQueue.global().async { [weak self] in
+                    if let imageData = try? Data(contentsOf: imageUrl),
+                       let image = UIImage(data: imageData) {
+                        DispatchQueue.main.async {
+                            self?.heroImageView.image = image
+                        }
+                    } else {
+                        // Si hay un error al cargar la imagen, puedes asignar una imagen de marcador de posición o dejarla en blanco.
+                        DispatchQueue.main.async {
+                            self?.heroImageView.image = UIImage(named: "placeholder_image")
+                        }
+                    }
+                }
             } else {
                 // La URL de la imagen es nula o no válida, puedes asignar una imagen de marcador de posición o dejarla en blanco.
                 heroImageView.image = UIImage(named: "placeholder_image")
             }
         }
     }
-
 }
 
 

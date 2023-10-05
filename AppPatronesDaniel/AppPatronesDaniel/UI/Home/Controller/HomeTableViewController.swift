@@ -59,9 +59,10 @@ class HomeTableViewController: UITableViewController {
     
     // Select Item
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.onItemSelected(at: indexPath.row)
+        if let data = viewModel?.data(at: indexPath.row) {
+            viewModel?.onItemSelected(at: indexPath.row, data: data)
+        }
     }
-    
 }
 
 // MARK: - Extension -
@@ -73,8 +74,7 @@ extension HomeTableViewController: HomeViewProtocol {
     
     func navigateToDetail(with data: CharacterModel?) {
         let nextVC = DetailViewController()
+        nextVC.viewModel = DetailViewModel(selectedCharacter: data) // Pasa los datos del personaje a DetailViewController
         navigationController?.pushViewController(nextVC, animated: true)
     }
-    
-    
 }
