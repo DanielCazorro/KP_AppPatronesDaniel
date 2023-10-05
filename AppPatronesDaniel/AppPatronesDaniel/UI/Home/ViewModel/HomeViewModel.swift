@@ -11,7 +11,7 @@ import Foundation
 // MARK: - Protocol -
 
 protocol HomeViewModelProtocol {
-    
+    func onViewsLoaded()
 }
 
 
@@ -30,5 +30,9 @@ final class HomeViewModel {
 // MARK: - Extension
 
 extension HomeViewModel: HomeViewModelProtocol {
+    func onViewsLoaded() {
+        <#code#>
+    }
+    
     
 }
