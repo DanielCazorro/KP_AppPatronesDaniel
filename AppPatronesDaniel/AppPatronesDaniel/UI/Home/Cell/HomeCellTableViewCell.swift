@@ -27,7 +27,7 @@ class HomeCellTableViewCell: UITableViewCell {
     
     func updateViews(data: CharacterModel?) {
         update(name: data?.name)
-        //update(image: data?.photo)
+        update(imageUrl: data?.photo)
     }
     
     private func update(name: String?) {
