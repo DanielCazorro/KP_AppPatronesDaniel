@@ -58,14 +58,14 @@ var sampleCharacterData: CharactersModel = [
         id: "64143856-12D8-4EF9-9B6F-F08742098A18",
         favorite: false,
         description: "Bulma es un personaje sorprendente en un momento donde las protagonistas femeninas escaseaban. Aparece desde el primer episodio de Dragon Ball como el encuentro más curioso que tiene Goku con un ser humano. Su apariencia responde a los estándares de belleza, con quien hacen múltiples referencia a su ropa interior o su fisionomía femenina. Sin embargo, Bulma es una joven inteligente con mucha ambición para convertirse en una científica de renombre. Siempre está inventando artefactos tecnológicos y uno de sus mayores inventos fue el radar de las bolas de Dragón, ya que quería encontrarlas. Es una aventurera con una personalidad amable y bondadosa, aunque también tiene carácter fuerte cuando se enfada. En Dragon Ball Z creó una máquina del tiempo con la que Trunks del Futuro pudo viajar al pasado para alertar de la nueva amenaza que era Célula. En ese instante, Bulma y Vegeta forman una sorprendente pareja de anime, sobre todo tras ver el pasado del Saiyan. El paso del tiempo no ha hecho justicia al personaje que cada vez tiene menor relevancia, pero Bulma es el personaje femenino más importante de Dragon Ball.",
-        photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/11/bulma.jpg?width=300"
+        photo: "https://cdn.alfabetajuega.com/alfabetajuega/2021/01/Bulma-Dragon-Ball.jpg?width=300"
     ),
     CharacterModel(
             name: "Freezer",
             id: "C3DB3923-5D4F-4D23-9B76-4A6FA7B23B2A",
             favorite: false,
             description: "Freezer es uno de los personajes más crueles y despiadados de Dragon Ball Z. Es un tirano que gobierna sobre un gran imperio, y su objetivo es conquistar el universo. A lo largo de la serie, se revela que Freezer es un ser extremadamente poderoso, capaz de destruir planetas enteros con facilidad. Su forma final, conocida como \"Freezer Dorado\", es aún más formidable. Freezer es el principal antagonista de la saga de Namekusei y es responsable de la muerte de muchos personajes queridos, incluyendo a Krilin. Su enfrentamiento final con Goku es uno de los momentos más icónicos de la serie.",
-            photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/07/freezer.jpg?width=300"
+            photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/12/freezer-dragon-ball-bebe-abj.jpg?width=300"
         ),
     CharacterModel(
         name: "Beerus",
@@ -79,7 +79,7 @@ var sampleCharacterData: CharactersModel = [
         id: "9A812FC1-8903-4421-9C87-CE41D740BD25",
         favorite: false,
         description: "Piccolo es uno de los personajes más icónicos y complejos de Dragon Ball Z. Inicialmente, es un villano que busca vengarse de Goku por derrotar a su predecesor, el Rey Piccolo. Sin embargo, con el tiempo, Piccolo se redime y se convierte en un aliado valioso. Además de su poderosa capacidad de lucha, Piccolo es conocido por su inteligencia estratégica. También desempeña un papel importante en la crianza de Gohan, el hijo de Goku, y desarrolla un fuerte vínculo con él. A lo largo de la serie, Piccolo lucha junto a los demás guerreros Z para proteger la Tierra de las amenazas que surgen.",
-        photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/07/Piccolo.jpg?width=300"
+        photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/09/piccolo.jpg?width=300"
     ),
     CharacterModel(
         name: "Kaito",
