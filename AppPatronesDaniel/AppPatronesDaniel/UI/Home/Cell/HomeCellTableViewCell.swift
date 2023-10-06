@@ -67,9 +67,9 @@ class HomeCellTableViewCell: UITableViewCell {
                     self?.imageCellHome.image = image
                 }
             } else {
-                // Si los datos no son válidos, asigna una imagen de marcador de posición o deja la vista de imagen en blanco
+                // Si los datos no son válidos, asigna una imagen de marcador de posición o deja la vista de imagen en blanco: AQUÍ PODEMOS COLOCAR UNA IMAGEN PERSONALIZADA PARA CUANDO HAYA ERROR
                 DispatchQueue.main.async {
-                    self?.imageCellHome.image = UIImage(named: "placeholder_image")
+                    self?.imageCellHome.image = UIImage(named: "Error404")
                 }
             }
         }
