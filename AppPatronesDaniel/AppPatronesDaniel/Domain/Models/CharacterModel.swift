@@ -122,5 +122,12 @@ var sampleCharacterData: CharactersModel = [
         favorite: false,
         description: "Trunks es hijo de Bulma y Vegeta, pero tarda bastante en aparecer en la trama. Todo se vuelve más interesante cuando aparece un misterioso viajero del tiempo que se llama Trunks del Futuro, que será determinante en Dragon Ball Z. Este personaje es una versión del pequeño Trunks que ha viajado al pasado para advertir de las amenazas que pueden destruir el mundo. Es el único superviviente de los Guerreros Z en un futuro alternativo apocalíptico, así que utiliza la máquina del tiempo que inventa su madre para regresar al tiempo presente.",
         photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/07/Trunks.jpg?width=300"
+    ),
+    CharacterModel(
+        name: "Daniel Cazorro",
+        id: "9A812FC1-8903-4421-9C87-CE41D740BD25",
+        favorite: false,
+        description: "The Ultimate iOS Mobile Developer Junior. Best Mistakes ever, best iOS developer some day.",
+        photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/07/Piccolo.jpg?width=300"
     )
 ]

@@ -10,7 +10,7 @@ import UIKit
 // MARK: - Protocol -
 
 protocol DetailViewProtocol: AnyObject {
-    
+    func updateViews()
 }
 
 
@@ -28,7 +28,9 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        viewModel?.onViewsLoaded()
+        
+        
         if let selectedCharacter = viewModel?.selectedCharacter {
             // Configura los elementos de la vista con los datos del personaje seleccionado
             heroNameLabel.text = selectedCharacter.name
@@ -58,11 +60,27 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    
+    private func registerCells() {
+        
+    }
 }
 
 
 // MARK: - Extension -
 
 extension DetailViewController {
-    
+    func updateViews() {
+        // Actualiza la vista con los datos del viewModel
+        if let selectedCharacter = viewModel?.selectedCharacter {
+            // Actualiza los elementos de la vista con los datos del personaje seleccionado
+            heroNameLabel.text = selectedCharacter.name
+            heroDescriptionTextView.text = selectedCharacter.description
+            
+            // Carga la imagen desde la URL (si corresponde) de la misma manera que lo hiciste en viewDidLoad
+            // ...
+        }
+        
+        // Aquí pondríamos la función para navegar a la vista Transformaciones
+    }
 }

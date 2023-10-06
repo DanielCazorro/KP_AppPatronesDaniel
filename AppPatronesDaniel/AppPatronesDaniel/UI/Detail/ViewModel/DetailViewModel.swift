@@ -16,16 +16,20 @@ protocol DetailViewModelProtocol {
 
 final class DetailViewModel: DetailViewModelProtocol {
 
-    
+    private weak var viewDelegate: DetailViewProtocol?
+    private var viewData = CharactersModel()
     var selectedCharacter: CharacterModel?
 
-    init(selectedCharacter: CharacterModel?) {
+    init(selectedCharacter: CharacterModel?, viewDelegate: DetailViewProtocol?) {
         self.selectedCharacter = selectedCharacter
+        self.viewDelegate = viewDelegate
     }
     
     private func loadData() {
-        
+        viewData = sampleCharacterData
+        viewDelegate?.updateViews()
     }
+    
 }
 
 // MARK: - Extension -
