@@ -60,5 +60,4 @@ extension HomeViewModel: HomeViewModelProtocol {
         loadData()
     }
     
-    
 }

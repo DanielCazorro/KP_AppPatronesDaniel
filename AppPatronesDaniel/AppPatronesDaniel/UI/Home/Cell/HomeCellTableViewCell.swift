@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class HomeCellTableViewCell: UITableViewCell {
 
     // MARK: IBOutlet
@@ -45,7 +46,7 @@ class HomeCellTableViewCell: UITableViewCell {
     private func update(imageUrl: String?) {
         guard let imageUrlString = imageUrl, let imageUrl = URL(string: imageUrlString) else {
             // Si la URL de la imagen es nula o no válida, puedes asignar una imagen de marcador de posición o dejarla en blanco.
-            imageCellHome.image = UIImage(named: "placeholder_image")
+            imageCellHome.image = UIImage(named: "Error404")
             return
         }
 
@@ -67,7 +68,7 @@ class HomeCellTableViewCell: UITableViewCell {
                     self?.imageCellHome.image = image
                 }
             } else {
-                // Si los datos no son válidos, asigna una imagen de marcador de posición o deja la vista de imagen en blanco: AQUÍ PODEMOS COLOCAR UNA IMAGEN PERSONALIZADA PARA CUANDO HAYA ERROR
+                // Si los datos no son válidos, asigna una imagen de marcador de posición o deja la vista de imagen en blanco
                 DispatchQueue.main.async {
                     self?.imageCellHome.image = UIImage(named: "Error404")
                 }

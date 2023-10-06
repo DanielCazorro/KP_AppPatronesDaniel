@@ -15,8 +15,6 @@ protocol SplashViewProtocol: AnyObject {
 }
 
 
-
-
 // MARK: - Class
 class SplashViewController: UIViewController {
 
@@ -36,6 +34,7 @@ class SplashViewController: UIViewController {
     }
 }
 
+
 // MARK: - Extension
 extension SplashViewController: SplashViewProtocol {
     // Func to charge activity indicatro
@@ -54,6 +53,5 @@ extension SplashViewController: SplashViewProtocol {
         nextVC.viewModel = HomeViewModel(viewDelegate: nextVC)
         navigationController?.setViewControllers([nextVC], animated: true)
     }
-    
     
 }

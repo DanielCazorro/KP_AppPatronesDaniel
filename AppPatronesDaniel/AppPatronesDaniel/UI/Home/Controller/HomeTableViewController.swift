@@ -15,6 +15,7 @@ protocol HomeViewProtocol: AnyObject {
     func updateViews()
 }
 
+
 // MARK: - Class -
 
 class HomeTableViewController: UITableViewController {
@@ -64,6 +65,7 @@ class HomeTableViewController: UITableViewController {
         }
     }
 }
+
 
 // MARK: - Extension -
 

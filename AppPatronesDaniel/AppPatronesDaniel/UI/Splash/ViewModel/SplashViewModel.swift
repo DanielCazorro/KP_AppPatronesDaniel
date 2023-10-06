@@ -13,7 +13,6 @@ protocol SplashViewModelProtocol {
 }
 
 
-
 // MARK: - Class
 final class SplashViewModel {
     
@@ -33,12 +32,10 @@ final class SplashViewModel {
 }
 
 
-
 // MARK: - Extension
 extension SplashViewModel: SplashViewModelProtocol {
     func onViewsLoaded() {
         loadData()
     }
-    
     
 }
