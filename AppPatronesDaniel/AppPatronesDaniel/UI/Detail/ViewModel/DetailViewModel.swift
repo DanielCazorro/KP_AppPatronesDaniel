@@ -20,3 +20,9 @@ final class DetailViewModel: DetailViewModelProtocol {
         self.selectedCharacter = selectedCharacter
     }
 }
+
+// MARK: - Extension -
+
+extension DetailViewModel {
+    
+}

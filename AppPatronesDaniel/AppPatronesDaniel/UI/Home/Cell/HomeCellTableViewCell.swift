@@ -18,6 +18,14 @@ class HomeCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         viewCellHome.layer.cornerRadius = 3.5
+        
+        viewCellHome.layer.shadowColor = UIColor.gray.cgColor
+        viewCellHome.layer.shadowOffset = .zero
+        viewCellHome.layer.shadowOpacity = 0.7
+        viewCellHome.layer.shadowRadius = 4.0
+        
+        imageCellHome.layer.cornerRadius = 4.0
+        imageCellHome.layer.opacity = 0.9
     }
 
     override func prepareForReuse() {
