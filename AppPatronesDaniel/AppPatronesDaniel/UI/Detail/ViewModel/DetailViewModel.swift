@@ -10,6 +10,7 @@
 protocol DetailViewModelProtocol {
     var selectedCharacter: CharacterModel? { get }
     func onViewsLoaded()
+    func data(at index: Int) -> CharacterModel?
 }
 
 // MARK: - Class -
@@ -37,5 +38,14 @@ final class DetailViewModel: DetailViewModelProtocol {
 extension DetailViewModel {
     func onViewsLoaded() {
         loadData()
+    }
+    
+    func data(at index: Int) -> CharacterModel? {
+        guard index < dataCount else {return nil}
+        return viewData[index]
+    }
+    
+    var dataCount: Int {
+        viewData.count
     }
 }

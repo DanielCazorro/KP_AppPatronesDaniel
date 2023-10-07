@@ -31,7 +31,11 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         viewModel?.onViewsLoaded()
         
+        let backButton = UIBarButtonItem()
+        backButton.title = "Volver"
+        navigationItem.backBarButtonItem = backButton
         
+        // TODO: ¿Sería posible mover esta función al ViewModel y llamarla luego ?
         if let selectedCharacter = viewModel?.selectedCharacter {
             // Configura los elementos de la vista con los datos del personaje seleccionado
             heroNameLabel.text = selectedCharacter.name

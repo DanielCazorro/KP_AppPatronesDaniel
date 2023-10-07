@@ -26,6 +26,11 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         registerCells()
         viewModel?.onViewsLoaded()
+        
+        let backButton = UIBarButtonItem()
+        backButton.title = "Volver" // El texto que desees
+        navigationItem.backBarButtonItem = backButton
+        
     }
 
     private func registerCells() {
