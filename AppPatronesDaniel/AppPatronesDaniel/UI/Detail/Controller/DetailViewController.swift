@@ -63,10 +63,7 @@ class DetailViewController: UIViewController {
             }
         }
     }
-    
-    private func registerCells() {
-        // TODO: ¿Es necesario?
-    }
+
 }
 
 
