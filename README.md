@@ -12,6 +12,4 @@ Datos técnicos
 
 # Capturas de Pantalla
 
-<img src="https://github.com/DanielCazorro/KP_AppPatronesDaniel/blob/main/Pictures/SimulatorScreen1.png" width="200" />
-<img src="https://github.com/DanielCazorro/KP_AppPatronesDaniel/blob/main/Pictures/SimulatorScreen2.png" width="200" />
-<img src="https://github.com/DanielCazorro/KP_AppPatronesDaniel/blob/main/Pictures/SimulatorScreen3.png" width="200" />
+<img src="https://github.com/DanielCazorro/KP_AppPatronesDaniel/blob/main/Pictures/SimulatorScreen1.png" width="200" /> <img src="https://github.com/DanielCazorro/KP_AppPatronesDaniel/blob/main/Pictures/SimulatorScreen2.png" width="200" /> <img src="https://github.com/DanielCazorro/KP_AppPatronesDaniel/blob/main/Pictures/SimulatorScreen3.png" width="200" />
