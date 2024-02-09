@@ -44,7 +44,7 @@ final class HomeViewModel {
 extension HomeViewModel: HomeViewModelProtocol {
     func onItemSelected(at index: Int) {
         //selectedCharacter = data // Configura el personaje seleccionado
-        viewDelegate?.navigateToDetail(with: data)
+       // viewDelegate?.navigateToDetail(with: data)
     }
     
     func data(at index: Int) -> CharacterModel? {
