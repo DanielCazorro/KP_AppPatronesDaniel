@@ -9,15 +9,12 @@ import UIKit
 
 
 // MARK: - Protocol -
-
 protocol HomeViewProtocol: AnyObject {
     func navigateToDetail(with data: CharacterModel?)
     func updateViews()
 }
 
-
 // MARK: - Class -
-
 class HomeTableViewController: UITableViewController {
         
     var viewModel: HomeViewModelProtocol?
@@ -35,6 +32,7 @@ class HomeTableViewController: UITableViewController {
 
     private func registerCells() {
         tableView.register(UINib(nibName: "HomeCellTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
+        self.title = "List Of Heroes"
     }
     
     // Table view data source

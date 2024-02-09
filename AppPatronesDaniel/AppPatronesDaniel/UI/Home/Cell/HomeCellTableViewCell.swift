@@ -19,30 +19,30 @@ class HomeCellTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         viewCellHome.layer.cornerRadius = 3.5
-        
         viewCellHome.layer.shadowColor = UIColor.gray.cgColor
         viewCellHome.layer.shadowOffset = .zero
         viewCellHome.layer.shadowOpacity = 0.7
         viewCellHome.layer.shadowRadius = 4.0
-        
         imageCellHome.layer.cornerRadius = 4.0
         imageCellHome.layer.opacity = 0.9
     }
 
     override func prepareForReuse() {
+        super.prepareForReuse()
         nameCellHome.text = nil
         imageCellHome.image = nil
     }
     
-    func updateViews(data: CharacterModel?) {
-        update(name: data?.name)
-        update(imageUrl: data?.photo)
+    // Esta función pinta la celda
+    func updateViews(data: CharacterModel) {
+        update(name: data.name)
+        update(image: data.photo)
     }
     
     private func update(name: String?) {
         nameCellHome.text = name ?? ""
     }
-    
+    /*
     private func update(imageUrl: String?) {
         guard let imageUrlString = imageUrl, let imageUrl = URL(string: imageUrlString) else {
             // Si la URL de la imagen es nula o no válida, puedes asignar una imagen de marcador de posición o dejarla en blanco.
@@ -77,5 +77,9 @@ class HomeCellTableViewCell: UITableViewCell {
 
         // Inicia la tarea de descarga
         task.resume()
+    }
+     */
+    private func update(image: String?) {
+        imageCellHome.image = UIImage(named: image ?? "")
     }
 }
