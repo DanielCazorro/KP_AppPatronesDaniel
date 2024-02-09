@@ -14,7 +14,7 @@ protocol HomeViewModelProtocol {
     var dataCount: Int { get }
     func onViewsLoaded()
     func data(at index: Int) -> CharacterModel?
-    func onItemSelected(at index: Int, data: CharacterModel)
+    func onItemSelected(at index: Int)
 }
 
 
@@ -24,7 +24,7 @@ final class HomeViewModel {
     
     private weak var viewDelegate: HomeViewProtocol?
     private var viewData = CharactersModel()
-    var selectedCharacter: CharacterModel? // Propiedad para almacenar el personaje seleccionado
+    //var selectedCharacter: CharacterModel? // Propiedad para almacenar el personaje seleccionado
         
     
     init(viewDelegate: HomeViewProtocol? = nil) {
@@ -42,8 +42,8 @@ final class HomeViewModel {
 // MARK: - Extension
 
 extension HomeViewModel: HomeViewModelProtocol {
-    func onItemSelected(at index: Int, data: CharacterModel) {
-        selectedCharacter = data // Configura el personaje seleccionado
+    func onItemSelected(at index: Int) {
+        //selectedCharacter = data // Configura el personaje seleccionado
         viewDelegate?.navigateToDetail(with: data)
     }
     
