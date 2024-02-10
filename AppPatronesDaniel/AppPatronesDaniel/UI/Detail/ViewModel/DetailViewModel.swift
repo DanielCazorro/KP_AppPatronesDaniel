@@ -8,9 +8,7 @@
 // MARK: - Protocol -
 
 protocol DetailViewModelProtocol {
-    var selectedCharacter: CharacterModel? { get }
-    func onViewsLoaded()
-    func data(at index: Int) -> CharacterModel?
+        func onViewsLoaded()
 }
 
 // MARK: - Class -
@@ -18,34 +16,15 @@ protocol DetailViewModelProtocol {
 final class DetailViewModel: DetailViewModelProtocol {
 
     private weak var viewDelegate: DetailViewProtocol?
-    private var viewData = CharactersModel()
-    var selectedCharacter: CharacterModel?
+    private var characterData: CharacterModel?
 
-    init(selectedCharacter: CharacterModel?, viewDelegate: DetailViewProtocol?) {
-        self.selectedCharacter = selectedCharacter
+    init(character: CharacterModel?, viewDelegate: DetailViewProtocol?) {
+        self.characterData = character
         self.viewDelegate = viewDelegate
     }
     
-    private func loadData() {
-        viewData = sampleCharacterData
-        viewDelegate?.updateViews()
-    }
-    
-}
-
-// MARK: - Extension -
-
-extension DetailViewModel {
     func onViewsLoaded() {
-        loadData()
+        viewDelegate?.updateViews(with: characterData)
     }
     
-    func data(at index: Int) -> CharacterModel? {
-        guard index < dataCount else {return nil}
-        return viewData[index]
-    }
-    
-    var dataCount: Int {
-        viewData.count
-    }
 }

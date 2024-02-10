@@ -78,7 +78,7 @@ extension HomeTableViewController: HomeViewProtocol {
         guard let data = data else { return }
         let nextVC = DetailViewController()
         // FIXME: CHECK THE ERROR
-        let nextVM = DetailViewModel(selectedCharacter: data, viewDelegate: nextVC)
+        let nextVM = DetailViewModel(character: data, viewDelegate: nextVC)
         
         nextVC.viewModel = nextVM
         navigationController?.pushViewController(nextVC, animated: true)

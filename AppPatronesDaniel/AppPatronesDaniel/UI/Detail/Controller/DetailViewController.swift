@@ -10,7 +10,7 @@ import UIKit
 // MARK: - Protocol -
 
 protocol DetailViewProtocol: AnyObject {
-    func updateViews()
+    func updateViews(with characterData: CharacterModel?)
 }
 
 
@@ -30,38 +30,14 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.onViewsLoaded()
-        
+        /*
         let backButton = UIBarButtonItem()
         backButton.title = "Volver"
         navigationItem.backBarButtonItem = backButton
+        */
         
-        // TODO: ¿Sería posible mover esta función al ViewModel y llamarla luego ?
-        if let selectedCharacter = viewModel?.selectedCharacter {
-            // Configura los elementos de la vista con los datos del personaje seleccionado
-            heroNameLabel.text = selectedCharacter.name
-            heroDescriptionTextView.text = selectedCharacter.description
-            
-            if let imageUrlString = selectedCharacter.photo,
-               let imageUrl = URL(string: imageUrlString) {
-                // Descarga la imagen desde la URL y asigna la imagen a heroImageView
-                DispatchQueue.global().async { [weak self] in
-                    if let imageData = try? Data(contentsOf: imageUrl),
-                       let image = UIImage(data: imageData) {
-                        DispatchQueue.main.async {
-                            self?.heroImageView.image = image
-                        }
-                    } else {
-                        // Si hay un error al cargar la imagen, puedes asignar una imagen de marcador de posición o dejarla en blanco.
-                        DispatchQueue.main.async {
-                            self?.heroImageView.image = UIImage(named: "Error404")
-                        }
-                    }
-                }
-            } else {
-                // La URL de la imagen es nula o no válida, puedes asignar una imagen de marcador de posición o dejarla en blanco.
-                heroImageView.image = UIImage(named: "Error404")
-            }
-        }
+        heroNameLabel.numberOfLines = 0
+        heroDescriptionTextView.isScrollEnabled = true
     }
 
 }
@@ -69,16 +45,14 @@ class DetailViewController: UIViewController {
 
 // MARK: - Extension -
 
-extension DetailViewController {
-    func updateViews() {
-        // Actualiza la vista con los datos del viewModel
-        if let selectedCharacter = viewModel?.selectedCharacter {
-            // Actualiza los elementos de la vista con los datos del personaje seleccionado
-            heroNameLabel.text = selectedCharacter.name
-            heroDescriptionTextView.text = selectedCharacter.description
-
+extension DetailViewController: DetailViewProtocol {
+    
+    func updateViews(with characterData: CharacterModel?) {
+        heroNameLabel.text = characterData?.name
+        heroDescriptionTextView.text = characterData?.description
+        if let imageName = characterData?.photo {
+            heroImageView.image = UIImage(named: imageName)
         }
         
-        // Aquí pondríamos la función para navegar a la vista Transformaciones
     }
 }
