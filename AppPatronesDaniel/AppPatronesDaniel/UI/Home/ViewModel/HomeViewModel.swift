@@ -27,8 +27,8 @@ final class HomeViewModel {
     }
     
     private func loadData() {
-        viewData = sampleCharacterData
-        viewDelegate?.updateViews()
+        viewData = sampleCharacterData // Cargar datos de muestra
+        viewDelegate?.updateViews() // Notificar a la vista que los datos han sido cargados
     }
     
 }
@@ -36,23 +36,21 @@ final class HomeViewModel {
 // MARK: - Extension
 extension HomeViewModel: HomeViewModelProtocol {
     func onItemSelected(at index: Int) {
-        
         guard let data = data(at: index) else { return }
-        // TODO: Comprobar si aquí hubier auqe añadir un detail data
-        viewDelegate?.navigateToDetail(with: data)
+        viewDelegate?.navigateToDetail(with: data) // Notificar a la vista que se ha seleccionado un elemento
     }
     
     func data(at index: Int) -> CharacterModel? {
         guard index < dataCount else { return nil }
-        return viewData[index]
+        return viewData[index] // Obtener los datos en el índice especificado
     }
     
     var dataCount: Int {
-        viewData.count
+        viewData.count // Obtener el número de elementos en los datos
     }
     
     func onViewsLoaded() {
-        loadData()
+        loadData() // Cargar los datos cuando las vistas sean cargadas
     }
     
 }
