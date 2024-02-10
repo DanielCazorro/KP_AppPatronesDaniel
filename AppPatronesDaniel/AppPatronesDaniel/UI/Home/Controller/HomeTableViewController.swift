@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 // MARK: - Protocol -
 protocol HomeViewProtocol: AnyObject {
     func navigateToDetail(with data: CharacterModel?)
@@ -23,26 +22,20 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         registerCells()
         viewModel?.onViewsLoaded()
-        /*
-        let backButton = UIBarButtonItem()
-        backButton.title = "Volver" // El texto que desees
-        navigationItem.backBarButtonItem = backButton
-        */
     }
     
+    /// Registrar la celda personalizada para su uso en la tabla
     private func registerCells() {
         tableView.register(UINib(nibName: "HomeCellTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCell")
-        self.title = "List Of Heroes"
+        self.title = "List Of Heroes" // Establecer el título de la vista
     }
     
     // Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return viewModel?.dataCount ?? 0
     }
     
@@ -50,11 +43,11 @@ class HomeTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as?
                 HomeCellTableViewCell else {
-            return UITableViewCell()
+            return UITableViewCell() // Devolver una celda vacía si no se puede crear la celda personalizada
         }
         
         if let data = viewModel?.data(at: indexPath.row) {
-            cell.updateViews(data: data)
+            cell.updateViews(data: data) // Actualizar las vistas de la celda con los datos del ViewModel
         }
         
         return cell
@@ -62,25 +55,25 @@ class HomeTableViewController: UITableViewController {
     
     // Select Item
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            viewModel?.onItemSelected(at: indexPath.row)
+        viewModel?.onItemSelected(at: indexPath.row) // Notificar al ViewModel cuando se selecciona una celda
     }
 }
-
 
 // MARK: - Extension -
 
 extension HomeTableViewController: HomeViewProtocol {
     func updateViews() {
-        tableView.reloadData()
+        tableView.reloadData() // Recargar la tabla cuando se actualicen los datos
     }
     
     func navigateToDetail(with data: CharacterModel?) {
         guard let data = data else { return }
-        let nextVC = DetailViewController()
-        // FIXME: CHECK THE ERROR
-        let nextVM = DetailViewModel(character: data, viewDelegate: nextVC)
         
+        // Crear y configurar el controlador de vista de detalle con el ViewModel adecuado
+        let nextVC = DetailViewController()
+        let nextVM = DetailViewModel(character: data, viewDelegate: nextVC)
         nextVC.viewModel = nextVM
+        
         navigationController?.pushViewController(nextVC, animated: true)
     }
 }

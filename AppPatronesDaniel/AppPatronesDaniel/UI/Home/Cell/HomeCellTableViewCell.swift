@@ -15,22 +15,23 @@ class HomeCellTableViewCell: UITableViewCell {
     @IBOutlet weak var imageCellHome: UIImageView!
     @IBOutlet weak var nameCellHome: UILabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        viewCellHome.layer.cornerRadius = 3.5
-        viewCellHome.layer.shadowColor = UIColor.gray.cgColor
-        viewCellHome.layer.shadowOffset = .zero
-        viewCellHome.layer.shadowOpacity = 0.7
-        viewCellHome.layer.shadowRadius = 4.0
-        imageCellHome.layer.cornerRadius = 4.0
-        imageCellHome.layer.opacity = 0.9
+        // Configuración de la apariencia de la celda
+        setupCellAppearance()
     }
 
     override func prepareForReuse() {
         super.prepareForReuse()
         nameCellHome.text = nil
         imageCellHome.image = nil
+    }
+    
+    private func setupCellAppearance() {
+       viewCellHome.layer.cornerRadius = 2
+        // Redondear los bordes de la imagen de la celda
+        imageCellHome.layer.cornerRadius = imageCellHome.bounds.height / 2.0 // Hacer la imagen circular
+        imageCellHome.clipsToBounds = true // Asegurar que la imagen respete el redondeo
     }
     
     // Esta función pinta la celda

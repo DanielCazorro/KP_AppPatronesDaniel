@@ -80,7 +80,6 @@
 				5D639F7B2ACDA8AE001B33F1 /* App */,
 				5D639F7C2ACDA8D4001B33F1 /* Resources */,
 				5D005ADB2ACD4B07002E28AA /* Domain */,
-				5D2EC9CF2B768763007E6F88 /* Utils */,
 				5D639F7D2ACDA8FB001B33F1 /* UI */,
 			);
 			path = AppPatronesDaniel;
@@ -100,13 +99,6 @@
 				5D005ADD2ACD4B1B002E28AA /* CharacterModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		5D2EC9CF2B768763007E6F88 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		5D639F7B2ACDA8AE001B33F1 /* App */ = {

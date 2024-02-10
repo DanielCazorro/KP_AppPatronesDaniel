@@ -7,14 +7,17 @@
 
 import Foundation
 
+/// Alias para un array de CharacterModel
 typealias CharactersModel = [CharacterModel]
 
+/// Estructura CharacterModel que representa un personaje
 struct CharacterModel {
-    var name: String
-    var description: String
-    var photo: String?
+    var name: String         // Nombre del personaje
+    var description: String  // Descripción del personaje
+    var photo: String?       // URL de la foto del personaje, opcional ya que puede no haber foto
 }
 
+/// Array de personajes
 var sampleCharacterData: CharactersModel = [
     CharacterModel(
         name: "Maestro Roshi",

@@ -7,13 +7,11 @@
 
 import UIKit
 
-
 // MARK: - Protocol
 protocol SplashViewProtocol: AnyObject {
-    func showLoading(_ show: Bool)
-    func navigateToHome()
+    func showLoading(_ show: Bool) // Método para mostrar u ocultar el indicador de carga
+    func navigateToHome() // Método para navegar a la pantalla de inicio
 }
-
 
 // MARK: - Class
 class SplashViewController: UIViewController {
@@ -23,6 +21,7 @@ class SplashViewController: UIViewController {
     
     var viewModel: SplashViewModelProtocol?
     
+    //MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.onViewsLoaded()
@@ -30,14 +29,13 @@ class SplashViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        activityIndicator.stopAnimating()
+        activityIndicator.stopAnimating() // Detiene el indicador de actividad cuando la vista desaparece
     }
 }
 
-
 // MARK: - Extension
 extension SplashViewController: SplashViewProtocol {
-    // Func to charge activity indicatro
+    // Método para mostrar u ocultar el indicador de carga
     func showLoading(_ show: Bool) {
         switch show {
         case true where !activityIndicator.isAnimating:
@@ -47,7 +45,7 @@ extension SplashViewController: SplashViewProtocol {
         default: break
         }
     }
-    // Func to move to Home View
+    // Método para navegar a la pantalla de inicio
     func navigateToHome() {
         let nextVC = HomeTableViewController()
         nextVC.viewModel = HomeViewModel(viewDelegate: nextVC)
